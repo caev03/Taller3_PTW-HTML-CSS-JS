@@ -1,0 +1,37 @@
+#contenedor{
+  margin-left:35%;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+table {
+ width:20%;
+ margin-left: 10%;
+ border: 5px solid #9999FF;
+}
+#historyTable{
+ width: 60%;
+ margin-left:-7%;
+}
+body {
+    background-image: url("../background.jpg");
+}
+img {
+ width: 12px;
+ height: 12px;
+}
+td {
+ border-right: 1px solid #d3d3d3;
+ padding: 0;
+}
+#calculator td:hover{
+ background-color: #B2B2FF;
+ color:white;
+}
+.callout {
+ width: 40%;
+ margin-left: 5%;
+ background-color: #B2B2FF;
+ color: white;
+}

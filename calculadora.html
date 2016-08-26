@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title> Awesome Calculator </title>
+	<link href="css/foundation.css" type="text/css" rel="stylesheet">
+	<link href="css/foundation.min.css" type="text/css" rel="stylesheet">
+	<link href="css/app.css" type="text/css" rel="stylesheet">
+	<link href="css/styles.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+	<div id="contenedor">
+		<table id="calculator">
+			<tr>
+				<th colspan="6">
+					<input id="display" type="text" readonly="true"></input>
+				</th>
+			</tr>
+			<tr>
+				<td onclick="pi();display('&pi;');">&pi;</td>
+				<td onclick="twoTimes();display('^2')">x^2</td>
+				<td onclick="sin()">sin(x)</td>
+				<td onclick="cos()">cos(x)</td>
+				<td onclick="addOperation('/');display('/')">/</td>
+				<td onclick="clearAll()">CE</td>
+			</tr>
+			<tr>
+				<td onclick="e();display('e');">e</td>
+				<td onclick="addValue('7');display('7');">7</td>
+				<td onclick="addValue('8');display('8')">8</td>
+				<td onclick="addValue('9');display('9')">9</td>
+				<td onclick="addOperation('*');display('*')">*</td>
+				<td onclick="addOperation('^');display('^')">x^y</td>
+			</tr>
+			<tr>
+				<td onclick="square();display('^0.5')">&#8730;</td>
+				<td onclick="addValue('4');display('4')">4</td>
+				<td onclick="addValue('5');display('5')">5</td>
+				<td onclick="addValue('6');display('6')">6</td>
+				<td onclick="addOperation('-');display('-')">-</td>
+				<td onclick="factorial();display('!')">n!</td>
+			</tr>
+			<tr>
+				<td onclick="e();display('e');addOperation('^');display('^')">e^x</td>
+				<td onclick="addValue('1');display('1')">1</td>
+				<td onclick="addValue('2');display('2')">2</td>
+				<td onclick="addValue('3');display('3')">3</td>
+				<td onclick="addOperation('+');display('+')">+</td>
+				<td onclick="changeSign()">+/-</td>
+			</tr>
+			<tr>
+				<td onclick="addValue('.');display('.')" style="font-size:30px">.</td>
+				<td onclick="addValue('0');display('0')" colspan='3'>0</td>
+				<td onclick="compute()" colspan='2'>=</td>
+			</tr>
+		</table>
+		<table id="historyTable">
+			<tr>
+				<td rowspan='2' width='10%' id="indexHist">
+					<h2 id="historyIndex"></h2>
+				</td>
+				<td rowspan='2' width='80%'>
+					<h4 id="hOperation"></h4>
+					<h5 id="hResult"></h5>
+				</td>
+				<td onclick="backHistory()"><img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-arrow-up-b-128.png"></img>
+				</td>
+			</tr>
+			<tr>
+				<td onclick="forwHistory()"><img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-arrow-down-b-128.png"></img>
+				</td>
+			</tr>
+		</table>
+		<div class="callout small" id="calloutMessage">
+			<h5>There is no operation to perform.</h5>
+		</div>
+	</div>
+	<script src="js/vendor/jquery.js"></script>
+	<script src="js/vendor/foundation.js"></script>
+	<script src="js/vendor/foundation.min.js"></script>
+	<script src="js/vendor/what-input.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/calc_operations.js"></script>
+	<script>
+		$(document).foundation();
+		$("#calloutMessage").hide()
+	</script>
+</body>
+
+</html>
